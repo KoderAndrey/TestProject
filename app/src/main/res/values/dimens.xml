@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="weather_item_padding">15dp</dimen>
+    <dimen name="padding_weather_item">5dp</dimen>
+    <dimen name="separator_height">1dp</dimen>
+    <dimen name="height_weather_list">250dp</dimen>
+</resources>
