@@ -28,7 +28,6 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
@@ -128,7 +127,7 @@ public class MapsActivity extends MvpAppCompatActivity implements MapView, OnMap
     }
 
     @Override
-    public void noError(Throwable throwable) {
+    public void onError(Throwable throwable) {
         mProgressBar.setVisibility(View.GONE);
         Toast.makeText(this, getString(R.string.error) + throwable.getMessage(), Toast.LENGTH_SHORT).show();
     }
@@ -157,14 +156,6 @@ public class MapsActivity extends MvpAppCompatActivity implements MapView, OnMap
         mMarkerOptions.position(latLng);
         mMap.addMarker(mMarkerOptions);
         mMapPresenter.onMapClicked(latLng);
-    }
-
-    public void setHybridMap() {
-        mMap.setMapType(MAP_TYPE_HYBRID);
-    }
-
-    public void setNormalMap() {
-        mMap.setMapType(MAP_TYPE_NORMAL);
     }
 
     private void showWeatherDialog(ArrayList<WeatherDisplayData> displayData) {

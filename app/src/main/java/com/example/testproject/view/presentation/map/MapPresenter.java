@@ -48,7 +48,7 @@ public class MapPresenter extends MvpPresenter<MapView> {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(listWeather -> getViewState().getWeather(Mapper.getDisplayDataList(listWeather)),
-                        throwable -> getViewState().noError(throwable));
+                        throwable -> getViewState().onError(throwable));
     }
 
     private RequstData getRequstData(LatLng latLng) {

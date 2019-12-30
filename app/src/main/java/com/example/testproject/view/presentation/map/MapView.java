@@ -9,6 +9,6 @@ import java.util.List;
 
 public interface MapView extends MvpView {
   void getWeather(ArrayList<WeatherDisplayData> weatherList);
-  void noError(Throwable throwable);
+  void onError(Throwable throwable);
   void onStartLoad();
 }

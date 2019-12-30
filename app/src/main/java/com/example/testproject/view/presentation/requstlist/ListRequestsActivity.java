@@ -56,7 +56,7 @@ public class ListRequestsActivity extends MvpAppCompatActivity implements ListRe
     }
 
     @Override
-    public void noError(Throwable throwable) {
+    public void onError(Throwable throwable) {
         Toast.makeText(this, getString(R.string.error) + throwable.getMessage(), Toast.LENGTH_SHORT).show();
     }
 

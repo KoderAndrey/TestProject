@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface ListRequestsView extends MvpView {
     void getDataList(List<RequstData> list);
-    void noError(Throwable throwable);
+    void onError(Throwable throwable);
 }
